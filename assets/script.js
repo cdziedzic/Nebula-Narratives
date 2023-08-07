@@ -1,30 +1,18 @@
-<<<<<<< HEAD
+let baseUrl = "https://quote-garden.onrender.com/api/v3/quotes";
+let queryParameters = {
+author: string (Optional),
+genre: string (Optional),
+count: number (Optional),
+}
 
-console.log("Cynthia")
-console.log('Chris Dziedzic');
 
-console.log("Jocelin");
-
-
-// fetch("https://collectionapi.metmuseum.org/public/collection/v1/objects?metadataDate=2018-10-22")
-// .then(function(response){
-    
-// return response.json()     
-// })
-// .then(function (dogFact) {
-//     console.log(dogFact)
-// })
-
-fetch("https://poetrydb.org/title")
+fetch("https://quote-garden.onrender.com/api/v3/quotes")
 .then(function(response){
     
 return response.json()     
 })
-.then(function (dogFact) {
-    console.log(dogFact)
-});
-=======
-console.log("Cynthia")
-console.log('Chris Dziedzic')
-console.log("Jocelin");
->>>>>>> 009256b784802883beab1fba2bcdc07e0e0bf0e9
+.then(function (quoteIndex) {
+    console.log(quoteIndex)
+    let quote = document.createElement("quotes")
+
+})
