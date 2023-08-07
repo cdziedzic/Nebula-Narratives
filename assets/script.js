@@ -21,21 +21,17 @@ newNasaButton.addEventListener('click', function (event) {
 })
 // commented load function out to save daily api calls
 // getNasa();
-let baseUrl = "https://quote-garden.onrender.com/api/v3/quotes";
-let queryParameters = {
-author: string (Optional),
-genre: string (Optional),
-count: number (Optional),
-}
 
 
-fetch("https://quote-garden.onrender.com/api/v3/quotes")
+fetch("https://quote-garden.onrender.com/api/v3/quotes/random")
 .then(function(response){
     
 return response.json()     
 })
 .then(function (quoteIndex) {
     console.log(quoteIndex)
-    let quote = document.createElement("quotes")
+    let displayQuote = quoteIndex.data[0].quoteText;
+    let quoteEl = document.getElementById("quotes");
+    quoteEl.textContent = displayQuote;
 
 })
