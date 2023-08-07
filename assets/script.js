@@ -22,16 +22,27 @@ newNasaButton.addEventListener('click', function (event) {
 // commented load function out to save daily api calls
 // getNasa();
 
+let nextQuoteBtn = document.getElementById("new-text");
+let quoteEl = document.getElementById("quotes");
 
-fetch("https://quote-garden.onrender.com/api/v3/quotes/random")
-.then(function(response){
+function getQuote(){
+    fetch("https://quote-garden.onrender.com/api/v3/quotes/random")
+    .then(function(response){
+        
+    return response.json()     
+    })
+    .then(function (quoteIndex) {
+        console.log(quoteIndex)
+        let displayQuote = quoteIndex.data[0].quoteText;
+        quoteEl.textContent = displayQuote;
     
-return response.json()     
-})
-.then(function (quoteIndex) {
-    console.log(quoteIndex)
-    let displayQuote = quoteIndex.data[0].quoteText;
-    let quoteEl = document.getElementById("quotes");
-    quoteEl.textContent = displayQuote;
+    })
+}
 
-})
+nextQuoteBtn.addEventListener("click", function (event){
+
+    getQuote();
+    quoteEl.textContent = "";
+    
+}
+)
