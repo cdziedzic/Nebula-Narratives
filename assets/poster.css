@@ -1,0 +1,41 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5%;
+    align-items: center;
+    background-image: linear-gradient(.270turn, black, grey);
+}
+
+
+main { 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: red;
+    color: white;
+    width: 90%;
+    margin: auto;
+}
+
+h1 {
+    background-color: rgb(102, 102, 102);
+    text-align: center;
+
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.poster {
+
+}
+
+button {
+    flex-basis: 20%;
+}
+
+button:hover {
+    cursor: pointer;
+}   
