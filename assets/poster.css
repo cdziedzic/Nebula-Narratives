@@ -16,10 +16,18 @@ main {
     margin: auto;
 }
 
-h1 {
+main h1 {
     background-color: black;
     text-align: center;
 
+}
+
+main title {
+    display: none;
+    text-align: center;
+    background-color: black;
+    align-items: center;
+    font-size: 30pt;
 }
 
 img {
@@ -37,7 +45,7 @@ img {
     gap: 20px;
 }
 
-button {
+.buttons button {
     width: 30%;
     text-align: center;
     align-items: center;
@@ -47,3 +55,40 @@ button {
 button:hover {
     cursor: pointer;
 }   
+
+.modal {
+    display: none;
+    flex-wrap: wrap;
+    z-index: 1;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    position: absolute;
+    left: 45%;
+    top: 40%;
+    animation-name: animatetop;
+    animation-duration: 1s;
+    justify-content: center;
+    width: 10%;
+    max-height: 5%;
+    background-color: white;
+    align-items: center;
+}
+
+.modal p {
+    background-color: white;
+    color: black;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    font-size: 16pt;
+}
+
+.modal input {
+    width: 100%;
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 40%; opacity: 1}
+}
