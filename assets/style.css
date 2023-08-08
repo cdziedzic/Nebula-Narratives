@@ -17,6 +17,7 @@
     padding: 3%;
     padding: 40px;
 }
+
 #nav-links {
     display: flex;
     justify-content: space-between;
@@ -24,7 +25,7 @@
 }
 
 
-#title{
+#title {
     font-size: 150%;
     margin: 10px;
 }
@@ -42,12 +43,13 @@ a {
 
 /* Intro */
 
-/* h1 {
-    position:center;
+h1 {
+    /* position:relative; */
     font-size: 200%;
     margin: 10px;
+    text-align: center;
 
-} */
+}
 
 
 
@@ -60,29 +62,49 @@ a {
     padding: 200px 0;
 }
 
-#nasa-img {
+#nasa-images {
     grid-column-start: 2;
-    position: center;
+    position: relative;
+    background: green;
 
-    height:500px;
-    width:500px;
+    height: 500px;
+    width: 800px;
     object-fit: contain;
 }
+
+#nasa-img {
+    width: 100%;
+    height: auto;
+}
+
+#next-img-button {
+    background: black;
+    color: white;
+    font-size: 20px;
+    height: 30px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 230px;
+    right: 10px;
+}
+
+backButon {}
 
 /* #randomQuotes {
     grid-column-start: 3;
     grid-column-end: 6;
 } */
 
-h2{
+h2 {
     font-size: 200%;
     margin: 10px;
 }
 
 #quotes {
-    font-family:'Courier New', Courier, monospace;
-    font-weight:100;
-    font-style: normal;   
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+    font-style: normal;
 
     grid-column-start: 3;
     grid-column-end: 6;
