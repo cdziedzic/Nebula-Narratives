@@ -2,6 +2,7 @@ let nasaBox = document.getElementById('nasa-images')
 let nasaFixedImage = document.getElementById('nasa-img')
 let newNasaButton = document.getElementById('next-img-button')
 
+
 function getNasa() {
     // calls nasa api for an image of the day and makes new img element
     fetch(`https://api.nasa.gov/planetary/apod?api_key=p027dcXDBzAB1YTjEeaiAA2djDcIYC5joRZl66GR&count=1`)
@@ -24,7 +25,7 @@ newNasaButton.addEventListener('click', function (event) {
 // commented load function out to save daily api calls
 // getNasa();
 
-let nextQuoteBtn = document.getElementById("new-text");
+let nextQuoteBtn = document.getElementById("next-quote-button");
 let quoteEl = document.getElementById("quotes");
 
 function getQuote() {
@@ -35,16 +36,25 @@ function getQuote() {
         })
         .then(function (quoteIndex) {
             console.log(quoteIndex)
+
             let displayQuote = quoteIndex.data[0].quoteText;
             quoteEl.textContent = displayQuote;
 
         })
 }
 
-nextQuoteBtn.addEventListener("click", function (event) {
 
+nextQuoteBtn.addEventListener("click", function (event) {
+    event.preventDefault()
     getQuote();
     quoteEl.textContent = "";
 
 }
 )
+
+let generate = document.getElementById("generatePosterBtn")
+generate.addEventListener("click", function (event){
+    event.target
+    window.location.href = "./poster.html";
+}
+);
