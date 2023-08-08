@@ -1,10 +1,23 @@
-// let buttonLinkEl = document.getElementById('new-image')
+let buttonLinkEl = document.getElementById('title-image')
+let modal = document.getElementById('modal-box')
+let titleEl = document.getElementById('title')
+let submitButton = document.getElementById('submit')
+let inputValue = document.getElementById('input-box')
+
+//open the modal
+buttonLinkEl.addEventListener('click', function (event) {
+    event.preventDefault();
+    modal.style.display = "flex";
+
+})
+
+//close the modal and display title element
+submitButton.addEventListener('click', function(event){
+    event.preventDefault();
+    modal.style.display = "none";
+    titleEl.style.display = "block";
+    titleEl.textContent = inputValue.value;
 
 
-// addEventListener.buttonLinkEl('click', function (event) {
-//     event.preventdefault()
-//     window.location.href = "./index.html"
-// }
 
-// )
-
+})
