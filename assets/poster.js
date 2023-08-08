@@ -1,3 +1,12 @@
+
+// display the quote on the poster (h1)
+let savedQuote = localStorage.getItem("quote");
+
+let displayQuote = document.getElementById("displayQuote")
+if(savedQuote){
+    displayQuote.textContent=savedQuote;
+
+    
 let buttonLinkEl = document.getElementById('title-image')
 let modal = document.getElementById('modal-box')
 let titleEl = document.getElementById('title')
@@ -19,11 +28,4 @@ submitButton.addEventListener('click', function(event){
     titleEl.textContent = inputValue.value;
 
 })
-
-// display the quote on the poster (h1)
-let savedQuote = localStorage.getItem("quote");
-
-let displayQuote = document.getElementById("displayQuote")
-if(savedQuote){
-    displayQuote.textContent=savedQuote;
 }
