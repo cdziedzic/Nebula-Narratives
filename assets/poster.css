@@ -1,11 +1,26 @@
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 0.5%;
     align-items: center;
-    background-image: linear-gradient(.270turn, black, grey);
+    background-color: black;  
+    padding: 0.1%
 }
 
+nav p {
+    color: white;
+}
+
+a {
+    border-radius: 5pt;
+    padding: 0.5%;
+    background-color: darkgrey;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+background-color: lightblue;
+}
 
 main { 
     display: flex;
@@ -49,11 +64,16 @@ img {
     width: 30%;
     text-align: center;
     align-items: center;
+    background-color: darkgrey;
+    border: none;
+    border-radius: 5pt;
 
 }
 
 button:hover {
     cursor: pointer;
+    background-color: lightblue;
+
 }   
 
 .modal {
