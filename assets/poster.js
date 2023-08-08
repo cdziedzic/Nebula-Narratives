@@ -1,4 +1,3 @@
-
 // display the quote on the poster (h1)
 let savedQuote = localStorage.getItem("quote");
 
