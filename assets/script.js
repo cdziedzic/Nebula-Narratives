@@ -25,32 +25,33 @@ newNasaButton.addEventListener('click', function (event) {
 // commented load function out to save daily api calls
 // getNasa();
 
-let nextQuoteBtn = document.getElementById("next-quote-button");
-let quoteEl = document.getElementById("quotes");
 
 function getQuote() {
-    fetch("https://quote-garden.onrender.com/api/v3/quotes/random")
-        .then(function (response) {
-
-            return response.json()
-        })
-        .then(function (quoteIndex) {
-            console.log(quoteIndex)
-
-            let displayQuote = quoteIndex.data[0].quoteText;
-            quoteEl.textContent = displayQuote;
-
-        })
+    return fetch("https://quote-garden.onrender.com/api/v3/quotes/random")
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (quoteIndex) {
+        let displayQuote = quoteIndex.data[0].quoteText;
+        quoteEl.textContent = displayQuote;
+        return displayQuote;
+    });
 }
 
+let quoteEl = document.getElementById("quotes");
+let nextQuoteBtn = document.getElementById("next-quote-button");
 
-nextQuoteBtn.addEventListener("click", function (event) {
-    event.preventDefault()
-    getQuote();
-    quoteEl.textContent = "";
+nextQuoteBtn.addEventListener("click", async function (event) {
+    event.preventDefault();
+    let quote = await getQuote(); // Use await to wait for the promise to resolve
+    localStorage.setItem("quote", quote);
+});
 
+// Check if there's a saved quote in local storage and display it
+let savedQuote = localStorage.getItem("quote");
+if (savedQuote) {
+    quoteEl.textContent = savedQuote;
 }
-)
 
 let generate = document.getElementById("generatePosterBtn")
 generate.addEventListener("click", function (event){
