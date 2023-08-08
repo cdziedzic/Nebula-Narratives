@@ -31,6 +31,18 @@ main {
     margin: auto;
 }
 
+a {
+    border-radius: 5pt;
+    padding: 0.5%;
+    background-color: darkgrey;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+background-color: lightblue;
+}
+
 main h1 {
     background-color: black;
     text-align: center;
@@ -64,16 +76,18 @@ img {
     width: 30%;
     text-align: center;
     align-items: center;
-    background-color: darkgrey;
     border: none;
     border-radius: 5pt;
+    padding: 0.5%;
+    background-color: darkgrey;
+    text-decoration: none;
+    color: black;
 
 }
 
 button:hover {
     cursor: pointer;
     background-color: lightblue;
-
 }   
 
 .modal {
