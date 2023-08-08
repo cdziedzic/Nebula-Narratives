@@ -1,9 +1,18 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     padding: 0.5%;
     align-items: center;
     background-image: linear-gradient(.270turn, black, grey);
+}
+
+nav p {
+    color: white;
+    font-size: 16pt;
 }
 
 
@@ -57,7 +66,7 @@ img {
     gap: 20px;
 }
 
-.buttons button {
+button {
     width: 30%;
     text-align: center;
     align-items: center;
@@ -89,22 +98,24 @@ button:hover {
     animation-duration: 1s;
     justify-content: center;
     width: 10%;
-    max-height: 5%;
     background-color: white;
     align-items: center;
+    border: solid 5px lightblue;
+    height: 15%;
+    background-color: black;
+    color: white;
 }
 
 .modal p {
-    background-color: white;
-    color: black;
     text-align: center;
-    height: 100%;
     width: 100%;
     font-size: 16pt;
+    color: white;
 }
 
 .modal input {
     width: 100%;
+    background-color: white;
 }
 
 @keyframes animatetop {
