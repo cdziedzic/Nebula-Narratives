@@ -8,3 +8,4 @@
 
 // )
 
+let savedQuote = localStorage.getItem("quote");
