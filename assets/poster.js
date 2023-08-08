@@ -18,6 +18,12 @@ submitButton.addEventListener('click', function(event){
     titleEl.style.display = "block";
     titleEl.textContent = inputValue.value;
 
-
-
 })
+
+// display the quote on the poster (h1)
+let savedQuote = localStorage.getItem("quote");
+
+let displayQuote = document.getElementById("displayQuote")
+if(savedQuote){
+    displayQuote.textContent=savedQuote;
+}
