@@ -48,3 +48,11 @@ nextQuoteBtn.addEventListener("click", function (event) {
 
 }
 )
+
+
+let generate = document.getElementById("generate");
+generate.addEventListener("click", function (event){
+    event.target
+    window.location.href = "./poster.html";
+}
+);
