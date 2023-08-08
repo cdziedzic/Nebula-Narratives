@@ -43,6 +43,7 @@ function getQuote() {
         })
 }
 
+
 nextQuoteBtn.addEventListener("click", function (event) {
     event.preventDefault()
     getQuote();
@@ -50,3 +51,10 @@ nextQuoteBtn.addEventListener("click", function (event) {
 
 }
 )
+
+let generate = document.getElementById("generatePosterBtn")
+generate.addEventListener("click", function (event){
+    event.target
+    window.location.href = "./poster.html";
+}
+);
