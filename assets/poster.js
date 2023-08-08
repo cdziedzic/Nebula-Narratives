@@ -1,22 +1,23 @@
-<<<<<<< HEAD
-let buttonLinkEl = document.getElementById('save-image')
+let buttonLinkEl = document.getElementById('title-image')
 let modal = document.getElementById('modal-box')
-=======
-// let buttonLinkEl = document.getElementById('new-image')
->>>>>>> 2a4c76909577c86105767db638ef39c1f6316d6e
+let titleEl = document.getElementById('title')
+let submitButton = document.getElementById('submit')
+let inputValue = document.getElementById('input-box')
 
+//open the modal
 buttonLinkEl.addEventListener('click', function (event) {
-    event.preventDefault()
-    modal.style.display = "flex"
+    event.preventDefault();
+    modal.style.display = "flex";
 
-<<<<<<< HEAD
 })
-=======
-// addEventListener.buttonLinkEl('click', function (event) {
-//     event.preventdefault()
-//     window.location.href = "./index.html"
-// }
 
-// )
->>>>>>> 2a4c76909577c86105767db638ef39c1f6316d6e
+//close the modal and display title element
+submitButton.addEventListener('click', function(event){
+    event.preventDefault();
+    modal.style.display = "none";
+    titleEl.style.display = "block";
+    titleEl.textContent = inputValue.value;
 
+
+
+})

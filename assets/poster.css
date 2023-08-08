@@ -22,6 +22,14 @@ main h1 {
 
 }
 
+main title {
+    display: none;
+    text-align: center;
+    background-color: black;
+    align-items: center;
+    font-size: 30pt;
+}
+
 img {
     max-height: 98%;
     max-width: 98%;
