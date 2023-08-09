@@ -20,7 +20,22 @@ nav p {
     font-size: 15pt;
 }
 
+a {
+    border-radius: 5pt;
+    padding: 0.5%;
+    background-color: darkgrey;
+    text-decoration: none;
+    color: black;
+    font-size: 15pt;
+    text-align: center;
+}
 
+a:hover {
+background-color: lightblue;
+}
+
+
+/* poster section */
 main { 
     display: flex;
     flex-wrap: wrap;
@@ -31,21 +46,8 @@ main {
     margin: auto;
 }
 
-a {
-    border-radius: 5pt;
-    padding: 0.5%;
-    background-color: darkgrey;
-    text-decoration: none;
-    color: black;
-    font-size: 15pt;
-}
-
-a:hover {
-background-color: lightblue;
-}
-
-
-main h2 {
+/* optional user inputed title */
+main h1 {
     visibility: hidden;
     margin: 0 auto;
     text-align: center;
@@ -56,7 +58,7 @@ main h2 {
     max-height: 300px;
 
 }
-
+/* image pulled from nasa api */
 img {
     display: block;
     margin:0 auto;
@@ -64,8 +66,8 @@ img {
     width: 95%;
     padding: 1%;
 }
-
-main h1 {
+/* quote pulled from quote api */
+main h2 {
     position: relative;
     bottom: 14%;
     margin: 0 auto;
@@ -80,6 +82,8 @@ main h1 {
     font-size: 1.5vw;
 
 }
+
+
 
 /* modal */
 
@@ -132,6 +136,10 @@ main h1 {
     gap: 20px;
 }
 
+.buttons a {
+    width: 30%;
+}
+
 button {
     width: 30%;
     text-align: center;
@@ -158,6 +166,8 @@ button:hover {
     to {top: 40%; opacity: 1}
 }
 
+
+/* increase font size and reposition modal for mobile */
 @media screen and (max-width: 768px) {
 
     .modal {
@@ -175,7 +185,7 @@ button:hover {
         font-size: 4vw;
     }
 
-    main h1 {
+    main h2 {
         font-size: 3vw;
     }
 }
