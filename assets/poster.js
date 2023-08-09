@@ -33,10 +33,10 @@ buttonLinkEl.addEventListener('click', function (event) {
 });
 
 //close the modal and display title element
-submitButton.addEventListener('click', function(event){
+submitButton.addEventListener('click', function(event) {
     event.preventDefault();
     modal.style.display = "none";
-    titleEl.style.display = "block";
+    titleEl.style.visibility = "visible";
     titleEl.textContent = inputValue.value;
 
 });

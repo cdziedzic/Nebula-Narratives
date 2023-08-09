@@ -2,6 +2,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    margin: 0;
+    background-color: black;
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -12,17 +16,20 @@ nav {
 
 nav p {
     color: white;
-    font-size: 1.5vw;
+    font-size: 15pt;
 }
 
 
 main { 
     display: flex;
+    position: relative;
     flex-wrap: wrap;
     background-color: black;
     color: white;
     width: 90%;
+    height: 90vh;
     margin: auto;
+    align-items: start;
 }
 
 a {
@@ -31,7 +38,7 @@ a {
     background-color: darkgrey;
     text-decoration: none;
     color: black;
-    font-size: 1.5vw;
+    font-size: 15pt;
 }
 
 a:hover {
@@ -39,7 +46,9 @@ background-color: lightblue;
 }
 
 main h1 {
-    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
     text-align: center;
     width: 98%;
     height: 50px;
@@ -47,23 +56,23 @@ main h1 {
 
 }
 
-main title {
-    display: none;
+main h2 {
+    visibility: hidden;
+    margin: 0 auto;
     text-align: center;
     background-color: black;
-    align-items: center;
-    font-size: 2vw;
+    font-size: 24px;
+    flex-basis: 100%;
+    width: 50%;
     max-height: 300px;
 
 }
 
 img {
-    
-    min-height: calc(90% - 2em);
-    min-width: 90%;
-    max-width: 600px;
-    max-height: 800px;
-    margin: auto;
+    display: block;
+    margin:0 auto;
+    height: 95%;
+    width: 95%;
     padding: 1%;
 }
 
@@ -86,7 +95,7 @@ button {
     background-color: darkgrey;
     text-decoration: none;
     color: black;
-    font-size: 1.5vw;
+    font-size: 15pt;
 
 }
 
@@ -99,22 +108,25 @@ button:hover {
     display: none;
     flex-wrap: wrap;
     z-index: 1;
-    width: 80%;
-    height: 80%;
     margin: auto;
     position: absolute;
-    left: 45%;
+    left: 40%;
     top: 40%;
     animation-name: animatetop;
     animation-duration: 1s;
     justify-content: center;
-    width: 10%;
+    width: 20%;
     background-color: white;
     align-items: center;
     border: solid 5px lightblue;
-    height: 15%;
+    height: 25%;
     background-color: black;
     color: white;
+}
+
+.modal button {
+    width: 50%;
+    font-size: 1vw;
 }
 
 .modal p {
@@ -135,19 +147,24 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
-    main h1 {
-        font-size: 15pt;
 
-    }
     .modal {
         width: 40%;
-        height: 20%;
+        left: 30%;
+    }
+
+    .modal p {
+        font-size: 5vw;
+    }
+    
+
+    .modal button {
+        width: 50%;
+        font-size: 4vw;
+    }
+
+    main h1 {
+        font-size: 2vw;
     }
 }
 
-@media screen and (max-width: 576px) {
-    main h1 {
-        font-size: 10pt;
-    }
-    
-}
