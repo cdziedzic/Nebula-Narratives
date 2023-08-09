@@ -17,7 +17,6 @@ if(savedQuote){
 
 }
 
-
 //display image on poster 
 
 if(savedImageUrl){
@@ -29,7 +28,6 @@ if(savedImageUrl){
 buttonLinkEl.addEventListener('click', function (event) {
     event.preventDefault();
     modal.style.display = "flex";
-
 });
 
 //close the modal and display title element
@@ -38,7 +36,6 @@ submitButton.addEventListener('click', function(event) {
     modal.style.display = "none";
     titleEl.style.visibility = "visible";
     titleEl.textContent = inputValue.value;
-
 });
 
 
