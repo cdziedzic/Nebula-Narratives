@@ -47,16 +47,21 @@ main{
 #nasa-images {
     grid-column-start: 2;
     position: relative;
+
     background: rgb(0, 0, 1);
 
     height: 500px;
     width: 800px;
     object-fit: contain;
+   
 }
 
 #nasa-img {
     width: 100%;
     height: 100%;
+    position: relative;
+    top: -10px;
+    left: -10px; 
 }
 
 #next-img-button, #next-quote-button  {
