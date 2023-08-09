@@ -21,7 +21,7 @@ https://cdziedzic.github.io/Project-1/
 ## Credits
 
 Christian Dziedzic - https://github.com/cdziedzic 
-Jocelin Amaya - 
+Jocelin Amaya - https://github.com/joceamayar
 Cynthia Huertas - https://github.com/CyndiCodes
 
 apis used:
