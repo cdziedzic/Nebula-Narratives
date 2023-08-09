@@ -1,6 +1,7 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
+/* navgation bar */
 
 nav {
     display: flex;
@@ -13,16 +14,6 @@ nav {
 nav p {
     color: white;
     font-size: 16pt;
-}
-
-
-main { 
-    display: flex;
-    flex-wrap: wrap;
-    background-color: black;
-    color: white;
-    width: 90%;
-    margin: auto;
 }
 
 a {
@@ -38,10 +29,16 @@ a:hover {
 background-color: lightblue;
 }
 
-main h1 {
-    background-color: black;
-    text-align: center;
 
+/* poster */
+
+main { 
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    color: white;
+    width: 90%;
+    margin: auto;
 }
 
 main title {
@@ -58,33 +55,13 @@ img {
     padding: 1%;
 }
 
-.buttons {
-    display: flex;
-    width: 90%;
-    margin: auto;
-    justify-content: center;
-    padding: 1%;
-    gap: 20px;
-}
-
-button {
-    width: 30%;
+main h1 {
+    background-color: black;
     text-align: center;
-    align-items: center;
-    border: none;
-    border-radius: 5pt;
-    padding: 0.5%;
-    background-color: darkgrey;
-    text-decoration: none;
-    color: black;
-    font-size: 16pt;
 
 }
 
-button:hover {
-    cursor: pointer;
-    background-color: lightblue;
-}   
+/* modal */
 
 .modal {
     display: none;
@@ -119,6 +96,39 @@ button:hover {
     width: 100%;
     background-color: white;
 }
+
+
+/* buttons */
+
+.buttons {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    padding: 1%;
+    gap: 20px;
+}
+
+button {
+    width: 30%;
+    text-align: center;
+    align-items: center;
+    border: none;
+    border-radius: 5pt;
+    padding: 0.5%;
+    background-color: darkgrey;
+    text-decoration: none;
+    color: black;
+    font-size: 16pt;
+
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: lightblue;
+}   
+
+
 
 @keyframes animatetop {
     from {top: -300px; opacity: 0}
