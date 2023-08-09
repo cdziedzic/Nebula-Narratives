@@ -4,7 +4,24 @@ let savedQuote = localStorage.getItem("quote");
 let displayQuote = document.getElementById("displayQuote")
 if(savedQuote){
     displayQuote.textContent=savedQuote;
+}
 
+
+//display image on poster 
+
+let savedImageUrl = localStorage.getItem("imageUrl");
+
+let displayImg = document.getElementById("displayImg");
+
+
+if(savedImageUrl){
+
+    displayImg.src= savedImageUrl;
+
+}
+  
+
+//
     
 let buttonLinkEl = document.getElementById('title-image')
 let modal = document.getElementById('modal-box')
@@ -17,7 +34,7 @@ buttonLinkEl.addEventListener('click', function (event) {
     event.preventDefault();
     modal.style.display = "flex";
 
-})
+});
 
 //close the modal and display title element
 submitButton.addEventListener('click', function(event){
@@ -26,5 +43,6 @@ submitButton.addEventListener('click', function(event){
     titleEl.style.display = "block";
     titleEl.textContent = inputValue.value;
 
-})
-}
+});
+
+
