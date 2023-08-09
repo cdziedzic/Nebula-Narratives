@@ -119,5 +119,33 @@ justify-content: center;
     transition: 0.3s;
     background-color: #01050a;
 }
+@media screen and (max-width: 768px) {
+    #container{
+        flex-direction: column;
 
+    }
+    #quotesDiv {
+        position: relative;
+        height: 300px;
+        width: 650px;
+
+    } 
+    #nasa-images {    
+        height: 300px;
+        width: 650px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #quotesDiv {
+        position: relative;
+        height: 300px;
+        width: 450px;
+
+    } 
+    #nasa-images {    
+        height: 300px;
+        width: 450px;
+    }
+}
 
