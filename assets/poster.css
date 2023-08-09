@@ -31,7 +31,7 @@ a {
 }
 
 a:hover {
-background-color: lightblue;
+background-color: rgb(189, 189, 236);
 }
 
 
@@ -157,7 +157,7 @@ button {
 
 button:hover {
     cursor: pointer;
-    background-color: lightblue;
+    background-color: rgb(189, 189, 236);
 }   
 
 

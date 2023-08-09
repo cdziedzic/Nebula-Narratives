@@ -73,6 +73,24 @@ main{
     right: 10px;
     border-radius: 50%;
 }
+ #next-img-button:hover {
+    background-color: rgb(189, 189, 236);
+    cursor: pointer;
+    color: black;
+}
+
+#next-quote-button:hover {
+    background-color: rgb(189, 189, 236);
+    cursor: pointer;
+    color: black;
+} 
+
+#generatePosterBtn:hover {
+    background-color: rgb(189, 189, 236);
+    cursor: pointer;
+    color: black;
+}
+
 
 /* quotes */
 
