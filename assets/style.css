@@ -24,6 +24,10 @@
     margin: 10px;
 }
 
+body{
+    margin: 15px;
+}
+
 /* main */
 
 h1 {
@@ -53,7 +57,6 @@ main{
     height: 500px;
     width: 800px;
     object-fit: contain;
-   
 }
 
 #nasa-img {
@@ -111,7 +114,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1%;
+    padding-top: 1%;
 }
 
 #generatePosterBtn {
@@ -121,11 +124,12 @@ main{
     color: #ffffff;
     font-size: 18px;
     border-radius: 5px;
-    width: 100%;
+    width: 87%;
     height: 60px;
     font-weight: bold;
     transition: 0.3s;
     background-color: #01050a;
+    
 }
 @media screen and (max-width: 768px) {
     #container{
