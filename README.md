@@ -1,4 +1,4 @@
-# Project-1
+# Nebula Narratives
 
 ## Description
 
@@ -6,13 +6,6 @@ This website will help you generate a poster or image for inspiration. The first
 
 This is really geared towards individual who love space and humor. 
 
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- index.html: select image and quote of your choice
-- poster: view post after generate
 
 ## Usage
 

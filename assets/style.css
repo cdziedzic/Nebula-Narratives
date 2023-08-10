@@ -65,6 +65,18 @@ main{
 
 }
 
+#prev-img-button, #prev-quote-button {    
+    background: rgba(0, 2, 8, 0.893);
+    color: white;
+    font-size: 18px;
+    height: 65px;
+    width: 65px;
+    position: absolute;
+    top: 230px;
+    left: 10px;
+    border-radius: 50%;
+}
+
 #next-img-button, #next-quote-button  {
     background: rgba(0, 2, 8, 0.893);
     color: white;
@@ -76,23 +88,12 @@ main{
     right: 10px;
     border-radius: 50%;
 }
- #next-img-button:hover {
+ #next-img-button:hover, #prev-img-button:hover, #generatePosterBtn:hover, #next-quote-button:hover, #prev-quote-button:hover {
     background-color: rgb(189, 189, 236);
     cursor: pointer;
     color: black;
 }
 
-#next-quote-button:hover {
-    background-color: rgb(189, 189, 236);
-    cursor: pointer;
-    color: black;
-} 
-
-#generatePosterBtn:hover {
-    background-color: rgb(189, 189, 236);
-    cursor: pointer;
-    color: black;
-}
 
 
 /* quotes */

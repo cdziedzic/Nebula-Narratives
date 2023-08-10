@@ -1,9 +1,9 @@
 let nasaBox = document.getElementById('nasa-images')
 let nasaFixedImage = document.getElementById('nasa-img')
 let newNasaButton = document.getElementById('next-img-button')
-
 let quoteEl = document.getElementById("quotes");
 let nextQuoteBtn = document.getElementById("next-quote-button");
+let previousNasaImages = []
 
 
 // Nasa images
@@ -15,8 +15,11 @@ function getNasa() {
         .then(response => response.json())
         .then(data => {
             nasaFixedImage.src = data[0].hdurl;
+            previousNasaImages.push(nasaFixedImage.src)
+            console.log(previousNasaImages)
         })
 }
+
 getNasa();
 
 // get new image when user clicks button
