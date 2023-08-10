@@ -129,7 +129,6 @@ main{
     height: 60px;
     font-weight: bold;
     transition: 0.3s;
-    background-color: #01050a;
     
 }
 @media screen and (max-width: 768px) {
