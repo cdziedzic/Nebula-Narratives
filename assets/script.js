@@ -10,8 +10,9 @@ let previousQuoteBtn = document.getElementById('prev-quote-button');
 let previousQuotes = [];
 let quoteArrayNumber = 0;
 
-getNasa();
-getQuote();
+
+checkQuote()
+checkNasa()
 
 
 //  get and display nasa images from API
@@ -43,10 +44,11 @@ function nextNasa() {
 
 //function for previous nasa button
 function previousNasa() {
-    // if (nasaArrayNumber < 0) {
-    //     alert("no more images")
-    //     nasaArrayNumber++
-    // }
+    if (nasaArrayNumber < 0) {
+        document.getElementById('modal')
+
+        nasaArrayNumber++
+    }
     
     nasaArrayNumber--;
     nasaFixedImage.src = previousNasaImages[nasaArrayNumber];
@@ -58,11 +60,6 @@ function previousNasa() {
 prevNasaBtn.addEventListener('click', previousNasa)
 newNasaButton.addEventListener('click', nextNasa);
 
-// Retrive and display image 
-// let  savedImageUrl = localStorage.getItem("nasa-image");
-//     if (savedImageUrl) {
-//     nasaFixedImage.textContent = savedImageUrl;
-// }
 
 // Quotes 
 
@@ -115,10 +112,33 @@ previousQuoteBtn.addEventListener('click', function(event) {
 })
 
 // Check if there's a saved quote in local storage and display it
-// let savedQuote = localStorage.getItem("quote");
-// if (savedQuote) {
-//     quoteEl.textContent = savedQuote;
-// }
+
+function checkQuote() {
+let savedQuote = localStorage.getItem("quote");
+if (savedQuote) {
+    quoteEl.textContent = savedQuote;
+    previousQuotes.push(savedQuote)
+}   
+
+else {
+    getQuote();}
+}
+
+// check if theres a saved image and display it
+
+function checkNasa() {
+let  savedImageUrl = localStorage.getItem("imageUrl");
+    if (savedImageUrl)  {
+    nasaFixedImage.src = savedImageUrl;
+    previousNasaImages.push(savedImageUrl)
+}
+    else {
+        getNasa();
+    }
+}
+
+
+
 
 // Generates poster, and stores the images into local storage 
 let generate = document.getElementById("generatePosterBtn")
