@@ -11,6 +11,8 @@ This is really geared towards individual who love space and humor.
 
 https://cdziedzic.github.io/Project-1/
 
+![Alt text](./assets/image.png)
+
 ## Credits
 
 Christian Dziedzic - https://github.com/cdziedzic 
