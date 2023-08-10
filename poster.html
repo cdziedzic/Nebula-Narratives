@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your inspirational poster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Handjet:wght@200&family=Press+Start+2P&family=Tektur:wght@500&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/poster.css">
 </head>
 <body>
+    <!-- navigation bar  -->
     <nav>
         <p>Your inspirational poster!</p>
-        <a href="./index.html">Make a new image</a>
- 
+        <a href="./index.html"> Home Page</a>
     </nav>
 
+    <!--poster-->
     <main>
         
-        <div id="poster">
-        <title id="title"></title>
+        <h1 id="title">placeholder</h1>
         <img id="displayImg"src="" alt="Nasa-images">
-        <h1 id = "displayQuote">Your Quote Goes here</h1>
-        </div>
+        <h2 id = "displayQuote">Your Quote Goes here</h2>
+  
        
    
         <div class="modal" id="modal-box">
@@ -27,18 +31,15 @@
             <input type="text" name="" id="input-box" placeholder="your title here">
             <button id="submit">Submit</button>
         </div>
-
 </main>
 
-
-
+<!-- Generate Btn   -->
 <div class="buttons">
     <a href="./index.html">Make a New image</a>
     <button id="title-image">Add a title to this image!</button>
 </div>
 
-
-
+<!-- Js link-->
 <script src="./assets/poster.js"></script>
 </body>
 </html>
