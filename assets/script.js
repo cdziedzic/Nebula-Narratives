@@ -10,9 +10,8 @@ let previousQuoteBtn = document.getElementById('prev-quote-button');
 let previousQuotes = [];
 let quoteArrayNumber = 0;
 
-
-
-// Nasa images
+getNasa();
+getQuote();
 
 
 //  get and display nasa images from API
@@ -26,9 +25,11 @@ function getNasa() {
             
         }
         )}
-
+//function for clicking next button
 function nextNasa() {
     nasaArrayNumber++
+    
+    //check if are at end of array. If at end get new image, otherwise step through array
     if (previousNasaImages.length === nasaArrayNumber) {
         getNasa();
     }
@@ -39,6 +40,8 @@ function nextNasa() {
 
 }
 
+
+//function for previous nasa button
 function previousNasa() {
     // if (nasaArrayNumber < 0) {
     //     alert("no more images")
@@ -50,22 +53,18 @@ function previousNasa() {
     
 }
 
-getNasa();
-getQuote();
 
+// buttons over the nasa images
 prevNasaBtn.addEventListener('click', previousNasa)
-
-
-// get new image when user clicks button
 newNasaButton.addEventListener('click', nextNasa);
 
 // Retrive and display image 
-let  savedImageUrl = localStorage.getItem("nasa-image");
-    if (savedImageUrl) {
-    nasaFixedImage.textContent = savedImageUrl;
-}
+// let  savedImageUrl = localStorage.getItem("nasa-image");
+//     if (savedImageUrl) {
+//     nasaFixedImage.textContent = savedImageUrl;
+// }
 
-// Qutes 
+// Quotes 
 
 
 //  Get and Display quotes images from API
@@ -80,9 +79,11 @@ function getQuote() {
     }
     )}
     
-
+//function for next quote button
 function nextQuote() {
     quoteArrayNumber++
+   
+   //check if are at end of array. If at end get new image, otherwise step through array
     if (previousQuotes.length === quoteArrayNumber) {
         getQuote();
     }
@@ -105,7 +106,7 @@ nextQuoteBtn.addEventListener("click", function (event) {
     }
     
 });
-
+//decrements through quotes array
 previousQuoteBtn.addEventListener('click', function(event) {
     event.preventDefault()
     quoteArrayNumber--
@@ -120,7 +121,6 @@ previousQuoteBtn.addEventListener('click', function(event) {
 // }
 
 // Generates poster, and stores the images into local storage 
-
 let generate = document.getElementById("generatePosterBtn")
 generate.addEventListener("click", function (event){
     event.target
