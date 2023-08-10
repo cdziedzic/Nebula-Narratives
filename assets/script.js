@@ -71,23 +71,38 @@ let  savedImageUrl = localStorage.getItem("nasa-image");
 //  Get and Display quotes images from API
 function getQuote() {
     fetch("https://quote-garden.onrender.com/api/v3/quotes/random")
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (quoteIndex) {
+    .then(response => response.json())
+    .then(quoteIndex => {
         let displayQuote = quoteIndex.data[0].quoteText;
         quoteEl.textContent = displayQuote;
         
         previousQuotes.push(displayQuote)
-        quoteArrayNumber++
+    }
+    )}
+    
 
-    });
+function nextQuote() {
+    quoteArrayNumber++
+    if (previousQuotes.length === quoteArrayNumber) {
+        getQuote();
+    }
+    
+    else { 
+        quoteEl.textContent = previousQuotes[quoteArrayNumber]
+    }
+
 }
 
 // next button clickable and stores img into local storage 
-nextQuoteBtn.addEventListener("click", async function (event) {
+nextQuoteBtn.addEventListener("click", function (event) {
     event.preventDefault();
-    await getQuote();
+    if (previousQuotes.length === quoteArrayNumber) {
+        getQuote();
+    }
+    
+    else { 
+        nextQuote()
+    }
     
 });
 
