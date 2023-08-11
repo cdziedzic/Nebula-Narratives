@@ -1,163 +1,147 @@
 * {
     box-sizing: border-box;
     padding: 0;
-    /* margin: 15px; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* navigation Bar */
+h1 {
+    margin: 0;
+}
 
 #nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    /* background-color: black;  used bootstrap instead*/
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 3%;
-    padding: 15px;
+    padding: 20px;
+    border-radius: 5px;
+    background: black;
 }
 
 #website-name {
-    font-size: 150%;
-    margin: 10px;
+    font-size: 200%;
 }
 
-body{
-    margin: 15px;
-}
-
-/* main */
-
-h1 {
-    font-size: 280%;
-    margin: 26px;
+#page-title {
+    margin: 25px;
     text-align: center;
-    justify-content: center;
 }
 
-main{
-  margin: 25px;
-}
-
-#container{
+#container {
     display: flex;
     justify-content: center;
+}
+
+main {
+display: flex;
+flex-direction: column;
+align-items: center;
+
 }
 
 /* images */
 
 #nasa-images {
-    grid-column-start: 2;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     background: rgb(0, 0, 1);
-
     height: 500px;
     width: 800px;
-    object-fit: contain;
+    position: relative;
 }
 
 #nasa-img {
-    width: 100%;
     height: 100%;
-
+    max-width: 800px;
+    max-width: 500px;
 }
 
-#prev-img-button, #prev-quote-button {    
-    background: rgba(0, 2, 8, 0.893);
-    color: white;
-    font-size: 18px;
-    height: 65px;
-    width: 65px;
+.prev-btn,
+.next-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 230px;
+    width: 35px;
+    height: 35px;
+    border-radius: 150px;
+}
+
+.prev-btn {
     left: 10px;
-    border-radius: 50%;
 }
 
-#next-img-button, #next-quote-button  {
-    background: rgba(0, 2, 8, 0.893);
-    color: white;
-    font-size: 18px;
-    height: 65px;
-    width: 65px;
-    position: absolute;
-    top: 230px;
+.next-btn {
     right: 10px;
-    border-radius: 50%;
-}
- #next-img-button:hover, #prev-img-button:hover, #generatePosterBtn:hover, #next-quote-button:hover, #prev-quote-button:hover {
-    background-color: rgb(189, 189, 236);
-    cursor: pointer;
-    color: black;
 }
 
-
+.btn i {
+    font-size: 30px;
+}
 
 /* quotes */
-
 #quotesDiv {
     position: relative;
     background: rgb(231, 231, 245);
     height: 500px;
     width: 800px;
-    object-fit: contain; 
+    object-fit: contain;
     font-size: xx-large;
     text-align: center;
     padding: 4%;
-} 
-
-/* generate Poster */
-
-#btnDiv{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 1%;
+    overflow: auto;
 }
+
 
 #generatePosterBtn {
-
-    line-height: 2;
-    text-decoration: none;
-    color: #ffffff;
     font-size: 18px;
-    border-radius: 5px;
-    width: 87%;
-    height: 60px;
-    font-weight: bold;
+    width: 1600px;
     transition: 0.3s;
-    
+    padding: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius:0;
 }
-@media screen and (max-width: 768px) {
-    #container{
-        flex-direction: column;
 
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px;
     }
-    #quotesDiv {
+
+    #container {
+        flex-direction: column;
+    }
+
+    #quotesDiv,
+    #nasa-images {
         position: relative;
         height: 300px;
-        width: 650px;
-    } 
+        width: 100%;
+    }
 
-    #nasa-images {    
-        height: 300px;
-        width: 650px;
+    .prev-btn,
+    .next-btn {
+        top: 150px;
     }
 }
 
 @media screen and (max-width: 576px) {
-    #quotesDiv {
-        position: relative;
-        height: 300px;
-        width: 450px;
+    body {
+        padding: 10px;
+    }
 
-    } 
-    #nasa-images {    
-        height: 300px;
-        width: 450px;
+    #quotesDiv,
+    #nasa-images {
+        height: 200px;
+        width: 100%;
+    }
+
+    .prev-btn,
+    .next-btn {
+        top: 100px;
     }
 }
-
