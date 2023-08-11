@@ -49,13 +49,13 @@ align-items: center;
 
     background: rgb(0, 0, 1);
     height: 500px;
-    width: 800px;
+    width: 40%;
     position: relative;
 }
 
 #nasa-img {
     height: 100%;
-    max-width: 800px;
+    max-width: 40%;
     max-width: 500px;
 }
 
@@ -88,7 +88,7 @@ align-items: center;
     position: relative;
     background: rgb(231, 231, 245);
     height: 500px;
-    width: 800px;
+    width: 40%;
     object-fit: contain;
     font-size: xx-large;
     text-align: center;
@@ -99,7 +99,7 @@ align-items: center;
 
 #generatePosterBtn {
     font-size: 18px;
-    width: 1600px;
+    width: 75.5%;
     transition: 0.3s;
     padding: 10px;
     border-top-left-radius: 0;
