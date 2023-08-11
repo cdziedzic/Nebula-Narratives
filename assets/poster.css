@@ -1,41 +1,60 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
+
 /* navgation bar */
 
 body {
     margin: 0;
     background-color: black;
 }
+
 nav {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-image: linear-gradient(.270turn, black, grey);
+    padding: 10px 20px;
 }
 
 nav p {
     color: white;
     font-size: 15pt;
+    margin-bottom: 0;
 }
 
 a {
     border-radius: 5pt;
     padding: 0.5%;
-    background-color: darkgrey;
+    background-color: black;
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 15pt;
     text-align: center;
 }
 
 a:hover {
-background-color: rgb(189, 189, 236);
+    background-color: rgb(189, 189, 236);
+    color: black;
+}
+
+a.btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 35px;
+    padding-right: 15px;
+}
+
+a i {
+    font-size: 20px;
+    margin-right: 5px;
 }
 
 
 /* poster section */
-main { 
+main {
     display: flex;
     flex-wrap: wrap;
     background-color: black;
@@ -55,17 +74,17 @@ main h1 {
     flex-basis: 100%;
     width: 50%;
     max-height: 300px;
-    
-
 }
+
 /* image pulled from nasa api */
 img {
     display: block;
-    margin:0 auto;
+    margin: 0 auto;
     height: 95%;
     width: 95%;
     padding: 1%;
 }
+
 /* quote pulled from quote api */
 main h2 {
     position: relative;
@@ -80,7 +99,7 @@ main h2 {
     text-decoration: none;
     color: white;
     font-size: 1vw;
-    font-family:'Tektur','Handjet', 'Press Start 2P',  cursive;
+    font-family: 'Tektur', 'Handjet', 'Press Start 2P', cursive;
 }
 
 
@@ -147,23 +166,30 @@ button {
     border: none;
     border-radius: 5pt;
     padding: 0.5%;
-    background-color: darkgrey;
+    background-color: black;
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 15pt;
-
 }
 
 button:hover {
     cursor: pointer;
     background-color: rgb(189, 189, 236);
-}   
+    color: black;
+}
 
 
 
 @keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 40%; opacity: 1}
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 40%;
+        opacity: 1
+    }
 }
 
 
@@ -178,7 +204,7 @@ button:hover {
     .modal p {
         font-size: 5vw;
     }
-    
+
 
     .modal button {
         width: 50%;
@@ -189,4 +215,3 @@ button:hover {
         font-size: 3vw;
     }
 }
-
