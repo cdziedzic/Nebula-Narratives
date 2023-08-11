@@ -32,6 +32,7 @@ h1 {
     display: flex;
     justify-content: center;
     max-width: 1000px;
+    min-width: 800px;
 }
 
 main {
@@ -49,20 +50,19 @@ main {
 /* images */
 
 #nasa-images {
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 
     background: rgb(0, 0, 1);
     height: 500px;
+    width: 50%;
     position: relative;
 }
 
 #nasa-img {
-    height: 100%;
-    max-width: 40%;
-    max-width: 500px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .prev-btn,
@@ -91,11 +91,10 @@ main {
 
 /* quotes */
 #quotesDiv {
-    flex: 1;
     position: relative;
     background: rgb(231, 231, 245);
     height: 500px;
-    width: 40%;
+    width: 50%;
     object-fit: contain;
     font-size: xx-large;
     text-align: center;
@@ -121,13 +120,19 @@ main {
 
     #container {
         flex-direction: column;
+        min-width: 300px;
     }
+    
 
     #quotesDiv,
     #nasa-images {
         position: relative;
         height: 300px;
         width: 100%;
+    }
+
+    #nasa-img {
+        max-height: 300px;
     }
 
     .prev-btn,
@@ -141,10 +146,20 @@ main {
         padding: 10px;
     }
 
+    #container {
+        flex-direction: column;
+        min-width: 300px;
+    }
+
     #quotesDiv,
     #nasa-images {
         height: 200px;
         width: 100%;
+    }
+
+    #nasa-img {
+        max-height: 300px;
+        height: 100%;
     }
 
     .prev-btn,
