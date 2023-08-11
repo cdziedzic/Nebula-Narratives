@@ -9,7 +9,7 @@ This is really geared towards individual who love space and humor.
 
 ## Usage
 
-https://cdziedzic.github.io/Project-1/
+https://cdziedzic.github.io/Nebula-Narratives/
 
 ![Alt text](./assets/image.png)
 
