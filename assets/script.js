@@ -13,6 +13,7 @@ let nasaArrayNumber = 0;
 let previousQuotes = [];
 let quoteArrayNumber = 0;
 
+
 startPage();
 
 function startPage() {
@@ -48,6 +49,7 @@ function getNasa() {
 // buttons over the nasa images
 prevNasaBtn.addEventListener('click', function previousNasa(event) {
     event.preventDefault()
+    console.log()
     if (nasaArrayNumber >= 0) {
         nasaArrayNumber--;
         nasaFixedImage.src = previousNasaImages[nasaArrayNumber];
